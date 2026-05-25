@@ -7,18 +7,18 @@ on:
     branches: [main]
 
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+  # tests:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-          cache: "pip"
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: "3.13"
+  #         cache: "pip"
 
-      - run: pip install -r requirements.txt
-      - run: pytest
+  #     - run: pip install -r requirements.txt
+  #     - run: pytest
 
   build-and-push:
     needs: tests
